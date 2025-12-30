@@ -81,23 +81,29 @@ nav ul li a {
 
 .service-container {
   display: flex;
-  flex-wrap: wrap; /* allows stacking on mobile */
-  gap: 20px;
-  justify-content: center;
+  flex-wrap: nowrap;        /* prevent wrapping */
+  overflow-x: auto;         /* enable horizontal scroll */
+  gap: 20px;                /* spacing between items */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
+
 
 .service {
+  flex: 0 0 auto;           /* prevent shrinking */
+  width: 250px;             /* fixed width for each service box */
   background: #f4f4f4;
   padding: 20px;
-  flex: 1 1 250px; /* flexible width */
   border-radius: 8px;
+  text-align: center;
 }
 
+
 .service img {
-  max-width: 100%;
+  width: 100%;              /* fill the service box */
   height: auto;
   border-radius: 8px;
 }
+
 
 /* About */
 #about {
