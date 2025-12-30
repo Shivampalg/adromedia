@@ -14,13 +14,15 @@ body {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* logo left, toggle right */
+  align-items: center;            /* vertically center items */
   padding: 15px;
   background: #730667;
   color: #fff;
-  flex-wrap: wrap; /* allows wrapping on small screens */
   background-image: url(img/background.png);
+  background-size: cover;         /* make background fit */
+  background-position: center;
+  flex-wrap: nowrap;              /* prevent wrapping */
 }
 
 header .logo {
@@ -28,14 +30,13 @@ header .logo {
   font-weight: bold;
   font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-/* Navigation */
-/* Default nav (desktop) */
-nav ul {
-  list-style: none;
+/* Ensure nav and toggle align properly */
+nav {
+  margin-left: auto; /* push nav/toggle to right */
   display: flex;
-  gap: 20px;
+  align-items: center;
 }
+
 
 .menu-toggle {
   display: none; /* hidden on desktop */
@@ -46,17 +47,35 @@ nav ul {
   cursor: pointer;
 }
 
+/* Navigation */
+/* Default nav (desktop) */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+
+
+
+/* Mobile styles */
 /* Mobile styles */
 @media (max-width: 768px) {
+  header {
+    flex-direction: row;   /* keep items in one line */
+    justify-content: space-between;
+  }
+
   nav ul {
     display: none; /* hide menu by default */
     flex-direction: column;
-    background: #730667;
+    background: #356bf4;
     position: absolute;
     top: 60px;
     right: 0;
     width: 200px;
     padding: 10px;
+    border-radius: 5px;
   }
 
   nav ul.show {
