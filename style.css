@@ -30,11 +30,42 @@ header .logo {
 }
 
 /* Navigation */
+/* Default nav (desktop) */
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* wrap links on small screens */
-  gap: 15px;
+  gap: 20px;
+}
+
+.menu-toggle {
+  display: none; /* hidden on desktop */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    background: #730667;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  nav ul.show {
+    display: flex; /* show when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger on mobile */
+  }
 }
 
 nav ul li a {
@@ -77,13 +108,16 @@ nav ul li a {
   background-image: url("img/background.png");
   padding: 40px 20px;
   text-align: center;
+  text-decoration: #fff;
 }
 
 .service-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: nowrap;        /* prevent wrapping */
   overflow-x: auto;         /* enable horizontal scroll */
-  gap: 20px;                /* spacing between items */
+  gap: 10%;                /* spacing between items */
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
