@@ -16,136 +16,105 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   background: #730667;
   color: #fff;
-  
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  background-image: url(img/background.png);
 }
 
 header .logo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: flex-end;
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: bold;
-  padding-bottom: 5px;
-  text-align: center;
-  align-items: start;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-nav ul li {
-  margin-left: 20px;
-  width: 100%;
-  height: 100%;
+  flex-wrap: wrap; /* wrap links on small screens */
+  gap: 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  width: 100%;
-  height: 100%;
+  font-size: 1rem;
 }
 
 /* Hero Section */
 .hero {
-  background: url('https://source.unsplash.com/1600x600/?marketing,advertising') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
-  background: rgba(155, 8, 8, 0.5);
   background-image: url("img/Logo1.jpeg");
   background-size: cover;
   background-position: center;
-  height: 500px;
-  width: 100%;
-  height: 100%;
-  
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
 }
-
 
 .hero h1 {
-  font-size: 6em;
+  font-size: 3rem; /* smaller default */
 }
-.hero p{
-    font-size: 1.5em;
+
+.hero p {
+  font-size: 1.2rem;
 }
 
 .hero button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background: #0e4da1;
   border: none;
-  
   color: #fff;
   cursor: pointer;
-  
-}
-.bigbutton{
-    font-size: 1.5em;
-    box-sizing: border-box;
-    border-radius: 8px;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 /* Services */
 #services {
-  background-image: url(img/background.png);
-  padding: 50px 20px;
+  background-image: url("img/background.png");
+  padding: 40px 20px;
   text-align: center;
-  width: 100%;
-  height: 100%;
-  
 }
 
 .service-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  width: 100%;
-  height: 100%;
-  
+  flex-wrap: wrap; /* allows stacking on mobile */
+  gap: 20px;
+  justify-content: center;
 }
 
 .service {
   background: #f4f4f4;
   padding: 20px;
-  width: 30%;
+  flex: 1 1 250px; /* flexible width */
   border-radius: 8px;
-  justify-content: center;
-  align-items: center;
 }
-.service img{
-    box-sizing: border-box;
-    width: 200px;
-    width: 50%;
+
+.service img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* About */
 #about {
-  padding: 50px 20px;
+  padding: 40px 20px;
   background: #eee;
   text-align: center;
-  width: 100%;
-  height: 100%;
 }
-#about a{
-    padding: 10px;
-    font-size: 30px;
-    color: #111;
+
+#about a {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #111;
 }
 
 /* Contact */
 #contact {
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -172,52 +141,62 @@ nav ul li a {
 /* Footer */
 footer {
   background: #730667;
-  
   color: #fff;
   text-align: center;
   padding: 20px;
+  background-image: url(img/background.png);
 }
+
+/* Responsive Images */
 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  justify-content: baseline;
-  align-items: end;
-  width: 5%;
-  height: 5%;
-  
 }
-.site-header {
-  background-image: url("img/background.png"); /* path to your image */
-  background-size: cover;        /* makes image cover the whole header */
-  background-position: center;   /* centers the image */
-  background-repeat: no-repeat;  /* prevents tiling */
-  height: 120px;                 /* adjust header height */
-  position: relative;
-  color: white;                  /* text color for contrast */
-  text-align: center;
-  
-}
-.sitefooter {
-  background-image: url("img/background.png"); /* path to your image */
-  background-size: cover;        /* makes image cover the whole header */
-  background-position: center;   /* centers the image */
-  background-repeat: no-repeat;  /* prevents tiling */
-                   /* adjust header height */
-  position: relative;
-  color: white;                  /* text color for contrast */
-  text-align: center;
-  
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+  }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 20px;
+  .hero {
+    padding: 60px 15px;
   }
-  img {
-    width: 100%;
-    height: auto;
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
   }
 }
-
-
