@@ -19,29 +19,41 @@ header {
   padding: 20px;
   background: #730667;
   color: #fff;
+  
 }
 
 header .logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-end;
   font-size: 40px;
   font-weight: bold;
   padding-bottom: 5px;
   text-align: center;
   align-items: start;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 nav ul li {
   margin-left: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
 /* Hero Section */
@@ -55,8 +67,11 @@ nav ul li a {
   background-size: cover;
   background-position: center;
   height: 500px;
+  width: 100%;
+  height: 100%;
   
 }
+
 
 .hero h1 {
   font-size: 6em;
@@ -73,192 +88,7 @@ nav ul li a {
   
   color: #fff;
   cursor: pointer;
-}
-.bigbutton{
-    font-size: 1.5em;
-    box-sizing: border-box;
-    border-radius: 8px;
-}
-
-/* Services */
-#services {
-  padding: 50px 20px;
-  text-align: center;
   
-}
-
-.service-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  
-}
-
-.service {
-  background: #f4f4f4;
-  padding: 20px;
-  width: 30%;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-}
-.service img{
-    box-sizing: border-box;
-    width: 200px;
-}
-
-/* About */
-#about {
-  padding: 50px 20px;
-  background: #eee;
-  text-align: center;
-}
-#about a{
-    padding: 10px;
-    font-size: 30px;
-    color: #111;
-}
-
-/* Contact */
-#contact {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#contactForm {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-#contactForm input, #contactForm textarea {
-  margin: 10px 0;
-  padding: 10px;
-}
-
-#contactForm button {
-  background: #111;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  background: #730667;
-  
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-  margin-left: 30px;
-  justify-content: baseline;
-  align-items: end;
-}
-.site-header {
-  background-image: url("img/background.png"); /* path to your image */
-  background-size: cover;        /* makes image cover the whole header */
-  background-position: center;   /* centers the image */
-  background-repeat: no-repeat;  /* prevents tiling */
-  height: 120px;                 /* adjust header height */
-  position: relative;
-  color: white;                  /* text color for contrast */
-  text-align: center;
-  
-}
-.sitefooter {
-  background-image: url("img/background.png"); /* path to your image */
-  background-size: cover;        /* makes image cover the whole header */
-  background-position: center;   /* centers the image */
-  background-repeat: no-repeat;  /* prevents tiling */
-                   /* adjust header height */
-  position: relative;
-  color: white;                  /* text color for contrast */
-  text-align: center;
-  
-}
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: #730667;
-  color: #fff;
-}
-
-header .logo {
-  font-size: 40px;
-  font-weight: bold;
-  padding-bottom: 5px;
-  text-align: center;
-  align-items: start;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-  background: url('https://source.unsplash.com/1600x600/?marketing,advertising') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
-  background: rgba(155, 8, 8, 0.5);
-  background-image: url("img/Logo1.jpeg");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  
-}
-
-.hero h1 {
-  font-size: 6em;
-}
-.hero p{
-    font-size: 1.5em;
-}
-
-.hero button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #0e4da1;
-  border: none;
-  
-  color: #fff;
-  cursor: pointer;
 }
 .bigbutton{
     font-size: 1.5em;
@@ -271,6 +101,8 @@ nav ul li a {
   background-image: url(img/background.png);
   padding: 50px 20px;
   text-align: center;
+  width: 100%;
+  height: 100%;
   
 }
 
@@ -278,6 +110,8 @@ nav ul li a {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  width: 100%;
+  height: 100%;
   
 }
 
@@ -292,6 +126,7 @@ nav ul li a {
 .service img{
     box-sizing: border-box;
     width: 200px;
+    width: 50%;
 }
 
 /* About */
@@ -299,6 +134,8 @@ nav ul li a {
   padding: 50px 20px;
   background: #eee;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 #about a{
     padding: 10px;
@@ -344,10 +181,11 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-top: 20px;
-  margin-left: 30px;
   justify-content: baseline;
   align-items: end;
+  width: 5%;
+  height: 5%;
+  
 }
 .site-header {
   background-image: url("img/background.png"); /* path to your image */
@@ -381,8 +219,5 @@ img {
     height: auto;
   }
 }
-
-
-
 
 
